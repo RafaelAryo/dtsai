@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form-v9 by Colorlib</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="css/nunito-font.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="css/style.css"/>
+
+	<script>
+		var loadFile = function(event) {
+			var image = document.getElementById('output');
+			image.src = URL.createObjectURL(event.target.files[0]);
+		};
+	</script>
+</head>
+<body class="form-v9">
+	<div class="page-content">
+		<div class="form-v9-content" style="background-image: url('images/form-v9.jpg')">
+			<form class="form-detail" action="#" method="post">
+				<h2>Car Parking Prediction</h2>
+					<p><img id="output" width="600" /></p>
+					<input type="file"  accept="image/*" name="image" id="imgfile"  onchange="loadFile(event)">
+					<form method=post enctype=multipart/form-data>
+         				<p class="text-light">
+							<input type=submit value=Upload >
+						</p>
+					</form>
+				</form>
+		</div>
+	</div>
+</body>
+</html>
